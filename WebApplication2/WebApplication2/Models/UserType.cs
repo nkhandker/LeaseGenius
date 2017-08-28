@@ -10,17 +10,11 @@
 namespace WebApplication2.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class User
+    public enum UserType : int
     {
-        public System.Guid UserID { get; set; }
-        public string UserName { get; set; }
-        public string UserPassword { get; set; }
-        public Nullable<UserType> UserType { get; set; }
-        public Nullable<int> UserApartmentID { get; set; }
-        public string UserRoom { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        GM = 0,
+        Tenant = 1,
+        Maintanence = 2
     }
 }

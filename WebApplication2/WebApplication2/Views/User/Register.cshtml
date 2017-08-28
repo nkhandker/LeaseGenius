@@ -30,6 +30,11 @@
                 <td>@Html.ValidationMessageFor(a => a.UserPassword)</td>
             </tr>
             <tr>
+                <td>User Type</td>
+                <td>@Html.EnumDropDownListFor(a => a.UserType)</td>
+                <td>@Html.ValidationMessageFor(a => a.UserType)</td>
+            </tr>
+            <tr>
                 <td></td>
                 <td>
                     <input type="submit" value="Register" />

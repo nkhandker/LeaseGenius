@@ -41,7 +41,7 @@
     <Property Name="UserID" Type="Guid" Nullable="false" />
     <Property Name="UserName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="UserPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="UserType" Type="Int32" />
+    <Property Name="UserType" Type="leasingModel.UserType" />
     <Property Name="UserApartmentID" Type="Int32" />
     <Property Name="UserRoom" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -53,4 +53,9 @@
     <EntitySet Name="MaintanenceOrders" EntityType="Self.MaintanenceOrder" />
     <EntitySet Name="Users" EntityType="Self.User" />
   </EntityContainer>
+  <EnumType Name="UserType">
+    <Member Name="GM" Value="0" />
+    <Member Name="Tenant" Value="1" />
+    <Member Name="Maintanence" Value="2" />
+  </EnumType>
 </Schema>

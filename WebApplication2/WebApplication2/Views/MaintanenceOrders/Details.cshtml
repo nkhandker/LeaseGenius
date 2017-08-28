@@ -1,0 +1,90 @@
+﻿@model WebApplication2.Models.MaintanenceOrder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MaintanenceOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApartmentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApartmentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProblemLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProblemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManagerApproval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManagerApproval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaintanenceVisit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaintanenceVisit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaintanenceCompletion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaintanenceCompletion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserFeedbackStar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserFeedbackStar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserFeedback)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserFeedback)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
