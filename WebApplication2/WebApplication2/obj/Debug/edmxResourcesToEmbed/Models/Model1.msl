@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="leasingModelStoreContainer" CdmEntityContainer="leasingEntities">
+    <EntitySetMapping Name="Apartments">
+      <EntityTypeMapping TypeName="leasingModel.Apartment">
+        <MappingFragment StoreEntitySet="Apartments">
+          <ScalarProperty Name="ApartmentID" ColumnName="ApartmentID" />
+          <ScalarProperty Name="ApartmentName" ColumnName="ApartmentName" />
+          <ScalarProperty Name="ApartmentLocation" ColumnName="ApartmentLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="leasingModel.Event">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="ApartmentID" ColumnName="ApartmentID" />
+          <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="EventPhotoUrl" ColumnName="EventPhotoUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaintanenceOrders">
+      <EntityTypeMapping TypeName="leasingModel.MaintanenceOrder">
+        <MappingFragment StoreEntitySet="MaintanenceOrders">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ApartmentID" ColumnName="ApartmentID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ProblemLocation" ColumnName="ProblemLocation" />
+          <ScalarProperty Name="ProblemDescription" ColumnName="ProblemDescription" />
+          <ScalarProperty Name="ManagerApproval" ColumnName="ManagerApproval" />
+          <ScalarProperty Name="MaintanenceVisit" ColumnName="MaintanenceVisit" />
+          <ScalarProperty Name="MaintanenceCompletion" ColumnName="MaintanenceCompletion" />
+          <ScalarProperty Name="UserFeedbackStar" ColumnName="UserFeedbackStar" />
+          <ScalarProperty Name="UserFeedback" ColumnName="UserFeedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="leasingModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserApartmentID" ColumnName="UserApartmentID" />
+          <ScalarProperty Name="UserRoom" ColumnName="UserRoom" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

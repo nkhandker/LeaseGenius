@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="leasingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Apartment">
+    <Key>
+      <PropertyRef Name="ApartmentID" />
+    </Key>
+    <Property Name="ApartmentID" Type="Int32" Nullable="false" />
+    <Property Name="ApartmentName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ApartmentLocation" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="Int32" Nullable="false" />
+    <Property Name="ApartmentID" Type="Int32" Nullable="false" />
+    <Property Name="EventTitle" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EventDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="EventPhotoUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MaintanenceOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="ApartmentID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ProblemLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ProblemDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerApproval" Type="Boolean" />
+    <Property Name="MaintanenceVisit" Type="Boolean" />
+    <Property Name="MaintanenceCompletion" Type="Boolean" />
+    <Property Name="UserFeedbackStar" Type="Int32" />
+    <Property Name="UserFeedback" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="UserApartmentID" Type="Int32" />
+    <Property Name="UserRoom" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="leasingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Apartments" EntityType="Self.Apartment" />
+    <EntitySet Name="Events" EntityType="Self.Event" />
+    <EntitySet Name="MaintanenceOrders" EntityType="Self.MaintanenceOrder" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>
